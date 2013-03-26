@@ -1,4 +1,8 @@
-## 0.1.0 (March 27, 2013)
+## 0.1.1 (March 26, 2013)
+
+Documentation improvements. No source changes.
+
+## 0.1.0 (March 26, 2013)
 
 The initial release.
 
