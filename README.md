@@ -95,6 +95,23 @@ Install a list of packages, specified by data bag. The default data
 bag is `packages`. And the list of items to install is set on
 `node['packages']`.
 
+Items can be specified as either a plain String (in which case the 
+latest version of the package of the same name will be installed),
+or as a JSON blob with 'name' and 'version' fields in order to 
+install a specific version of a package.
+
+An example data_bag with a specified version, `data_bags/packages/rpm.json`:
+
+   {
+     "id": "rpm",
+     "packages": [
+       {
+         "name" : "rpm",
+         "version" : "4.10.1-2.1ubuntu1"
+       }
+     ]
+   }
+
 # Attributes
 
 ## `data_bag`
