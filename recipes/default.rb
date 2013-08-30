@@ -11,7 +11,10 @@ items.each do |i|
   packages = item['packages']
 
   packages.each do |pkg|
-    package(pkg) do
+    pkg_name = pkg['name'] || pkg
+    pkg_version = pkg['version'] || nil
+    package(pkg_name) do
+      version pkg_version
       action :install
     end
   end
